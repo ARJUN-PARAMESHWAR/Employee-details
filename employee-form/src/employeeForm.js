@@ -1,89 +1,154 @@
-import "../src/employeeForm.css"
-
 function employeeForm() {
-
-    return(
-        
-        <div class="fullContainer">
-        <div class="form">
-            <div class="formPart1">
-                <div>Name</div>
-                <div>Date of birth</div>
-                <div>Gender</div>
-                <div>Role</div>
-                <div>Employee id</div>
-                <div>Mobile number</div>
-                <div>Nationality</div>
-                <div>Address</div>
-
-            </div>
-
-            <div class="formPart2">
-                <div>
-                    <input type="text" placeholder="First Name" class="inputBar_Form name" />
-                    <input type="text" placeholder="Last Name" class="inputBar_Form name"/>
-                </div>
-
-                <div>
-                    <input type="date" placeholder="dd/mm/yyyy" class="inputBar_Form"/>
-                </div>
-
-                <div id="radioButton">
-                    <input type="radio" id="male" name="gender"/>
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender"/>
-                    <label for="female">Female</label>
-                    <input type="radio" id="others" name="gender"/>
-                    <label for="others">Others</label>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="e-g: Developer" class="inputBar_Form"/>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="e-g: 1ps001" class="inputBar_Form"/>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="(+91)" class="inputBar_Form"/>
-                </div>
-
-                <div>
-                    <select>
-                        <option value="" disabled selected>Choose your country</option>
-                        <option>India</option>
-                        <option>U.S.</option>
-                        <option>U.K</option>
-                        <option>Singapore</option>
-                        <option>Malaysia</option>
-
-                    </select>
-                </div>
-
-                <div>
-                    <input type="text" placeholder="Line1" class="inputBar_Form addressLine" />
-                    <input type="text" placeholder="Line2" class="inputBar_Form addressLine"/>
-                    <input type="text" placeholder="Line3" class="inputBar_Form addressLine"/>
-                </div>
-
-                <div>
-                    <input type="checkbox"/>
-                    <span>I read all the</span>
-                    <span><a href="https://www.facebook.com">terms and conditions</a> and I acknowledge that I have understood
-                        them completely.</span>
-                </div>
-
-            </div>
-
-            <button class="submitButton" onclick="submit()">Submit</button>
-
-
+  return (
+    <div className="fullContainer">
+      <div
+        className="container text-center"
+        style={{ backgroundColor: "#6d9bc8" }}
+      >
+        {/*  row1   */}
+        <div className="row py-2">
+          <div className="col-3 text-start ps-3 pe-0">Name</div>
+          <div className="col-4 ps-0 pe-2">
+            <input
+              id="firstName"
+              class="form-control form-control-sm"
+              type={"text"}
+              placeholder="First Name"
+            ></input>
+          </div>
+          <div className="col-4 ps-2 pe-2">
+            <input
+              class="form-control form-control-sm"
+              type={"text"}
+              placeholder="Last Name"
+            ></input>
+          </div>
         </div>
+        {/*  row2   */}
+        <div className="row py-2">
+          <div className="col-3 text-start">Date of Birth</div>
+          <div className="col-3 px-0">
+            <input
+              class="form-control form-control-sm"
+              type={"date"}
+              placeholder="dd/mm/yyyy"
+            ></input>
+          </div>
+        </div>
+        {/*  row3   */}
+        <div className="row py-2 text-start">
+          <div className="col-3 text-start">Gender</div>
+          <div className="col px-0">
+            <input type={"radio"} name="gender"></input>
+            <label for="male">Male</label>
+          </div>
+          <div className="col px-0">
+            <input type={"radio"} name="gender"></input>
+            <label>Female</label>
+          </div>
+          <div className="col px-0">
+            <input type={"radio"} name="gender"></input>
+            <label for="">Others</label>
+          </div>
+        </div>
+
+        {/*  row4   */}
+
+        <div className="row py-2">
+          <div className="col-3 text-start">Role</div>
+          <div className="col ps-0">
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="e-g: Developer"
+            />
+          </div>
+        </div>
+
+        {/*  row5   */}
+
+        <div className="row py-2">
+          <div className="col-3 text-start">Employee-id</div>
+          <div className="col ps-0">
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="e-g: 1PS001"
+            />
+          </div>
+        </div>
+
+        {/*  row6   */}
+
+        <div className="row py-2">
+          <div className="col-3 text-start">Mobile No.</div>
+          <div className="col ps-0">
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="exclude (+91)"
+            />
+          </div>
+        </div>
+
+        {/*  row7   */}
+
+        <div className="row py-2">
+          <div className="col-3 text-start">Nationality</div>
+          <div className="col-4 ps-0">
+            <select class="form-control form-control-sm">
+              <option value="" disabled selected>
+                Choose your country
+              </option>
+              <option>India</option>
+              <option>U.S.</option>
+              <option>U.K</option>
+              <option>Singapore</option>
+              <option>Malaysia</option>
+            </select>
+          </div>
+        </div>
+
+        {/*  row8   */}
+
+        <div className="row py-2">
+          <div className="col-3 text-start">Address</div>
+          <div className="col ps-0">
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="Line1"
+            />
+            <input
+              class="form-control form-control-sm my-2"
+              type="text"
+              placeholder="Line2"
+            />
+            <input
+              class="form-control form-control-sm"
+              type="text"
+              placeholder="Line3"
+            />
+          </div>
+        </div>
+
+        {/*  row9   */}
+
+        <div className="row py-2 col d-flex justify-content-center">
+          <div>
+            <button
+              type="button"
+              className="btn btn-dark"
+              onClick={detailsFetch()}
+            >
+              SUBMIT
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-       
-    );
+  );
 }
 
+function detailsFetch() {}
 export default employeeForm;
-
